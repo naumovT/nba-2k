@@ -4,71 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js" defer></script>
+    <script src="libs/gsap/gsap.min.js"></script>
+    <script src="libs/gsap/ScrollSmoother.min.js"></script>
+    <script src="libs/gsap/ScrollTrigger.min.js"></script>
     <title>NBA2K14</title>
 </head>
 <body>
-    <header>
-        <div class="background" style="background-image: url(./images/background.png);"></div>
-        <div class="content">
-            <h1>NBA 2K14</h1>
-            <p>Баскетбол - больше, чем игра</p>    
-        <div>
-    </header>
-    <main>
-        <section class = "about">
-            <h2>О чем игра</h2>
-            <p class="about-text">
-                NBA 2K14 — продолжение баскетбольного симулятора от студии 2К. Дата выхода: 1 октября 2013 года.<br>
-                В игре можно управлять любимой командой или выйти в роли Лейброна Джеймса на баскетбольную площадку и проложить путь к славе команды «Майами Хит».
-            </p> 
-        </section>
-
-        <section class = "comments">
-            <div class="cards-container">
-                <h2>Отзывы игроков</h2>
-                <div class = "card">
-                    <img class="img-otthiv" src="./images/Otthiv1.png" alt="error">
-                    <p class="comment">После того как компания 2К вышла на рынок, она стремительно завоевала популярность всех фанов баскетбола. В их числе оказался и я, и с тех пор я играю в каждую из версий.<br>
-                        <b>Достоинства:</b> Геймплей, музыка, реалистика<br>
-                        <b>Недостатки:</b> Не могу данчить
-                    </p>
-                    <img class="img-gameplay" src="./images/Gameplay1.png" alt="error">
+    <div class="wrapper">
+        <div class="wrapper_content">
+            <header class="hero">
+                <div class="layer">
+                    <div class="layers_container">
+                        <div class="background layer_item" style="background-image: url(./images/background.png);"></div>
+                        <div class="head-text layer_item">
+                            <div class="content">
+                                <h1>NBA 2K14</h1>
+                                <p>Баскетбол - больше, чем игра</p>    
+                            <div>  
+                        </div>
+                        
+                    </div>   
                 </div>
-                <div class = "card">
-                    <img class="img-otthiv" src="./images/Otthiv2.png" alt="error">
-                    <p class="comment">Из названия игры - NBA2K2014 понятно, что мы имеем дело с баскетбольным симулятором, который выпущен известной компанией 2K Games. Спортивные симуляторы – это очень азартный вид компьютерных игр, позволяющий окунуться в мир виртуальных соревнований.<br>
-                        <b>Достоинства:</b> широкий спектр специализации игроков, динамичность и реалистичность<br>
-                        <b>Недостатки:</b> трудности при игре с клавиатуры
-                    </p>
-                    <img class="img-gameplay" src="./images/Gameplay2.png" alt="error">
+            </header>
+            <main>
+                <section class = "about">
+                    <h2>О чем игра</h2>
+                    <p class="about-text">
+                        NBA 2K14 — продолжение баскетбольного симулятора от студии 2К. Дата выхода: 1 октября 2013 года.<br>
+                        В игре можно управлять любимой командой или выйти в роли Лейброна Джеймса на баскетбольную площадку и проложить путь к славе команды «Майами Хит».
+                    </p> 
+                    <div class="gallery_wrapper">
+                        <div class="gallery">
+                            <div style="background-image: url(images/Gameplay2.png);" class="gallery-item active" ></div>
+                            <div style="background-image: url(images/Gameplay2.png);" class="gallery-item"></div>
+                            <div style="background-image: url(images/Gameplay2.png);" class="gallery-item"></div>
+                            <div style="background-image: url(images/Gameplay2.png);" class="gallery-item"></div>
+                            <div style="background-image: url(images/Gameplay2.png);" class="gallery-item"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class = "comments">
+                    <div class="cards-container">
+                        <h2>Отзывы игроков</h2>
+                        <div class = "card">
+                            <img class="img-otthiv" src="./images/Otthiv1.png" alt="error">
+                            <p class="comment">После того как компания 2К вышла на рынок, она стремительно завоевала популярность всех фанов баскетбола. В их числе оказался и я, и с тех пор я играю в каждую из версий.<br>
+                                <b>Достоинства:</b> Геймплей, музыка, реалистика<br>
+                                <b>Недостатки:</b> Не могу данчить
+                            </p>
+                            <img class="img-gameplay" src="./images/Gameplay1.png" alt="error">
+                        </div>
+                        <div class = "card">
+                            <img class="img-otthiv" src="./images/Otthiv2.png" alt="error">
+                            <p class="comment">Из названия игры - NBA2K2014 понятно, что мы имеем дело с баскетбольным симулятором, который выпущен известной компанией 2K Games. Спортивные симуляторы – это очень азартный вид компьютерных игр, позволяющий окунуться в мир виртуальных соревнований.<br>
+                                <b>Достоинства:</b> широкий спектр специализации игроков, динамичность и реалистичность<br>
+                                <b>Недостатки:</b> трудности при игре с клавиатуры
+                            </p>
+                            <img class="img-gameplay" src="./images/Gameplay2.png" alt="error">
+                        </div>
+                    </div>
+                </section>
+
+                <section class = "features">
+                    <h2>Особенности игры</h2>
+                    <ul class="features-list">
+                        <li>Реалистичная графика</li>
+                        <li>Возможности кастомизации</li>
+                        <li>Мультиплеер</li>
+                        <li>Карьера персонажа</li>
+                        <li>Настоящие движения игроков</li>
+                    </ul>
+                </section>
+            </main>
+            <footer>
+                <div class="contacts">
+                    <h3>Контакты</h3>
+                    <p class="contact"><b>Телефон</b> +7 902 311 65 53</p>
+                    <p class="contact"><b>Карта</b> 2200771177092848</p>
                 </div>
-            </div>
-        </section>
 
-        <section class = "features">
-            <h2>Особенности игры</h2>
-            <ul class="features-list">
-                <li>Реалистичная графика</li>
-                <li>Возможности кастомизации</li>
-                <li>Мультиплеер</li>
-                <li>Карьера персонажа</li>
-                <li>Настоящие движения игроков</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contacts">
-            <h3>Контакты</h3>
-            <p class="contact"><b>Телефон</b> +7 902 311 65 53</p>
-            <p class="contact"><b>Карта</b> 2200771177092848</p>
+                <div class="links">
+                    <h3>Социальные сети</h3>
+                    <a href="" class="link">Телеграмм</a>
+                    <a href="" class="link">Ютуб</a>
+                </div>
+            </footer>
         </div>
-
-        <div class="links">
-            <h3>Социальные сети</h3>
-            <a href="" class="link">Телеграмм</a>
-            <a href="" class="link">Ютуб</a>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
