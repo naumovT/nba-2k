@@ -58,3 +58,21 @@ function initGallery() {
 }
 
 document.addEventListener("DOMContentLoaded", initGallery)
+
+const themeChanger = document.querySelector(".theme-change")
+themeChanger.addEventListener("click", () => {
+    let isLight = localStorage.getItem("theme") == "light"
+    if (isLight) {
+        localStorage.setItem("theme", "dark")
+        themeChanger.innerHTML = '<i class="fas fa-moon"></i>'
+        document.documentElement.style.setProperty("--black", "#f2f2f2")
+        document.documentElement.style.setProperty("--white", "#2f2f2f")
+        document.documentElement.style.setProperty("--transparent_white", "rgba(0, 0, 0, 0.6)")
+    } else {
+        localStorage.setItem("theme", "light")
+        themeChanger.innerHTML = '<i class="fas fa-sun"></i>'
+        document.documentElement.style.setProperty("--black", "black")
+        document.documentElement.style.setProperty("--white", "#f2f2f2")
+        document.documentElement.style.setProperty("--transparent_white", "rgba(255, 255, 255, 0.6)")
+    }
+})
