@@ -2,7 +2,9 @@
     --black: black;
     --white: #f2f2f2;
     --transparent_white: rgba(255, 255, 255, 0.6);
-    --red: red;
+    --red: rgba(183, 0, 29, 0.8);
+    --yellow: rgb(255, 165, 0);
+    --transparent_yellow: rgba(255, 165, 0, 0.6);
 }
 
 * {
@@ -13,6 +15,47 @@
     transition: color 200ms ease, background-color 200ms ease;
 }
 
+.music {
+    display: flex;
+    justify-content: center;
+}
+
+.music-page {
+    height: 100%;
+    width: 35vw;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--black), var(--red));
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.music-picture{
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.music-line {
+    height: 0.5vh;
+    background-color: var(--black);
+    border-radius: 50px;
+}
+
+.play-button {
+    height: 4vh;
+    width: 4vh;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    background: none;
+}
+
+.music-line, .music-button {
+    margin-top: 10px;
+}
+
 body {
     background-color: var(--white);
     color: var(--black);
@@ -21,9 +64,9 @@ body {
 .theme-change {
     width: 5vw;
     height: 5vh;
-    color: var(--white);
+    color: var(--yellow);
     background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid var(--white);
+    border: 2px solid var(--yellow);
     border-radius: 2.5vw;
     position: fixed;
     top: 10px;
@@ -38,7 +81,7 @@ body {
 }
 
 .theme-change:hover {
-    background-color: var(--transparent_white);
+    background-color: var(--transparent_yellow);
 }
 .theme-change:active {
     transform: translateY(2px);

@@ -67,12 +67,42 @@ themeChanger.addEventListener("click", () => {
         themeChanger.innerHTML = '<i class="fas fa-moon"></i>'
         document.documentElement.style.setProperty("--black", "#f2f2f2")
         document.documentElement.style.setProperty("--white", "#2f2f2f")
+        document.documentElement.style.setProperty("--yellow", "#2f2f2f")
         document.documentElement.style.setProperty("--transparent_white", "rgba(0, 0, 0, 0.6)")
+        document.documentElement.style.setProperty("--transparent_yellow", "rgba(0, 0, 0, 0.6)")
     } else {
         localStorage.setItem("theme", "light")
         themeChanger.innerHTML = '<i class="fas fa-sun"></i>'
         document.documentElement.style.setProperty("--black", "black")
         document.documentElement.style.setProperty("--white", "#f2f2f2")
+        document.documentElement.style.setProperty("--yellow", "rgb(255, 165, 0)")
         document.documentElement.style.setProperty("--transparent_white", "rgba(255, 255, 255, 0.6)")
+        document.documentElement.style.setProperty("--transparent_yellow", "rgba(255, 165, 0, 0.6)")
     }
 })
+
+function initPlayer() {
+    const btn = document.querySelector(".play-button")
+    const audio = document.getElementById("audioPlayer")
+
+    btn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play()
+            btn.innerHTML = '<i class="fas fa-pause"></i>'
+        } else {
+            audio.pause()
+            btn.innerHTML = '<i class="fas fa-play"></i>'
+        }
+    })
+
+    const time = document.querySelector(".time")
+    audio.addEventListener("timeupdate", () => {
+        let minutes = Math.floor(audio.currentTime / 60)
+        let seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, "0")
+        let max_minutes = Math.floor(audio.duration / 60)
+        let max_seconds = Math.floor(audio.duration % 60).toString().padStart(2, "0")
+        time.innerHTML = `${max_minutes}:${max_seconds} / ${minutes}:${seconds}`
+    })
+}
+
+document.addEventListener("DOMContentLoaded", initPlayer)
