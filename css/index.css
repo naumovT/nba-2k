@@ -3,7 +3,8 @@
     --white: #f2f2f2;
     --transparent_white: rgba(255, 255, 255, 0.6);
     --red: rgba(183, 0, 29, 0.8);
-    --yellow: rgb(255, 165, 0);
+    --yellow1: rgb(255, 165, 0);
+    --yellow2: rgb(255, 165, 0);
     --transparent_yellow: rgba(255, 165, 0, 0.6);
 }
 
@@ -18,6 +19,12 @@
 .music {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
+}
+
+.music-section {
+    width: 80%;
+    margin: 100px auto;
 }
 
 .music-page {
@@ -25,7 +32,7 @@
     width: 35vw;
     border: 1px solid var(--black);
     border-radius: 10px;
-    background: linear-gradient(to right, var(--black), var(--red));
+    background: linear-gradient(to right, var(--black), var(--yellow2));
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -41,6 +48,12 @@
 .music-line {
     height: 0.5vh;
     background-color: var(--black);
+    border-radius: 50px;
+}
+
+.progress {
+    height: 0.3vh;
+    background-color: var(--red);
     border-radius: 50px;
 }
 
@@ -64,9 +77,9 @@ body {
 .theme-change {
     width: 5vw;
     height: 5vh;
-    color: var(--yellow);
+    color: var(--yellow1);
     background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--yellow1);
     border-radius: 2.5vw;
     position: fixed;
     top: 10px;
